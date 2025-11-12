@@ -1,99 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- ========== METADATOS ========== -->
-         <meta charset="UTF-8">
-         <meta name="author" content="Julio Cevallos">
-         <meta name="description" content="JavaScript Nivel Intermedio">
-         <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
-         <meta name="viewport" content="width=device-width initial-scale=1.0">
-         <!--<meta http-equiv="refresh" content="10"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller JavaScript - Nivel Intermedio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Taller Práctico de JavaScript </h1>
 
-         <!-- ========== PESTAÑA ========== -->
-          <title> Taller03-JavaScript </title>
-          <link rel="stylesheet" href="assets/style.css">
-    </head>
-
-    <body>
-        <div class="container">
-            <h1> Práctica - JavaScript </h1>
-
-            <!-- Sección 1: Calculadora -->
-             <section class="seccion">
-                <h2> Calculadora Interactiva </h2>
-                <div class="calculadora">
-                    <div class="input-group">
-                        <label for="num1"> Número 1: </label>
-                        <input type="number" id="num1" placeholder="Ingrese un número">
-                    </div>
-                    <div class="input-group">
-                        <label for="num2"> Número 2: </label>
-                        <input type="number" id="num2" placeholder="Ingrese un número">
-                    </div>
-                    <div class="botones">
-                        <button id="btnSumar"> Sumar </button>
-                        <button id="btnRestar"> Restar </button>
-                        <button id="btnMultiplicar"> Multiplicar </button>
-                        <button id="btnDividir"> Dividir </button>
-                    </div>
-                    <div id="resultadoCalc" class="resultado"> </div>
+        <!-- Sección 1: Calculadora -->
+        <section class="seccion">
+            <h2>Calculadora Interactiva</h2>
+            <div class="calculadora">
+                <div class="input-group">
+                    <label for="num1">Número 1:</label>
+                    <input type="number" id="num1" placeholder="Ingrese un número">
                 </div>
-             </section>
-
-             <!-- Seccion 2: Formulario de Registro -->
-              <section class="seccion">
-                <h2> Formulario de Registro </h2>
-                <form id="formRegistro">
-                    <div class="input-group">
-                        <label for="nombre"> Nombre Completo </label>
-                        <input type="text" id="nombre" placeholder="Mínimo 3 caracteres">
-                        <span id="contadorNombre" class="contador"> </span>
-                    </div>
-                    <div class="input-group">
-                        <label for="correo"> Correo Electronico </label>
-                        <input type="text" id="correo" placeholder="ejemplo@correo.com">
-                    </div>
-                    <div class="input-group">
-                        <label for="contrasena"> Contraseña </label>
-                        <input type="text" id="nombre" placeholder="Mínimo 6 caracteres">
-                        <span id="contadorContrasena" class="contador"> </span>
-                    </div>
-                    <div class="input-group">
-                        <label for="fechaNacimiento"> Fecha de Nacimiento </label>
-                        <input type="date" id="fechaNacimiento" >
-                    </div>
-                    <button type="submit" id="btnRegistrar"> Registrar </button>
-                    <div id="mensajeRegistro" class="mensaje"></div>
-                </form>
-              </section>
-
-              <!-- Seccion 3: Calculo de Diferencia de Fechas-->
-               <section class="seccion">
-                <h2> Calculadora de Fechas </h2>
-                <div class="fechas">
-                    <div class="input-group">
-                        <label for="fecha1"> Primera Fecha: </label>
-                        <input type="date" id="fecha1">
-                    </div>
-                    <div class="input-group">
-                        <label for="fecha2"> Segunda Fecha: </label>
-                        <input type="date" id="fecha2">
-                    </div>
-                    <button id="btnCalcularFechas"> Calcular Diferencia </button>
-                    <div id="resultadoFechas" class="resultado"> </div>
+                <div class="input-group">
+                    <label for="num2">Número 2:</label>
+                    <input type="number" id="num2" placeholder="Ingrese un número">
                 </div>
-               </section>
-        </div>
+                <div class="botones">
+                    <button id="btnSumar">Sumar</button>
+                    <button id="btnRestar">Restar</button>
+                    <button id="btnMultiplicar">Multiplicar</button>
+                    <button id="btnDividir">Dividir</button>
+                </div>
+                <div id="resultadoCalc" class="resultado"></div>
+            </div>
+        </section>
 
-        <footer>
-            <p>
-                Desarrollado por: jlcevall <br>
-                <a href="mailto:jujoceva@espol.edu.ec"> Correo Electronico </a> ||
-                <a href="tel:+593992300774"> Telefono </a>
-            </p>
-            <p> © 2025 Página de JavaScript Intermedio | ESPOL </p>
-        </footer>
+        <!-- Sección 2: Formulario de Registro -->
+        <section class="seccion">
+            <h2>Formulario de Registro</h2>
+            <form id="formRegistro">
+                <div class="input-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" placeholder="Mínimo 3 caracteres">
+                    <span id="contadorNombre" class="contador"></span>
+                </div>
+                <div class="input-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="text" id="correo" placeholder="ejemplo@correo.com">
+                </div>
+                <div class="input-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres">
+                    <span id="contadorContrasena" class="contador"></span>
+                </div>
+                <div class="input-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento">
+                </div>
+                <button type="submit" id="btnRegistrar">Registrar</button>
+                <div id="mensajeRegistro" class="mensaje"></div>
+            </form>
+        </section>
 
-        <script src="assets/javascript.js"></script>
-    </body>
+        <!-- Sección 3: Cálculo de Diferencia de Fechas -->
+        <section class="seccion">
+            <h2>Calculadora de Diferencia de Fechas</h2>
+            <div class="fechas">
+                <div class="input-group">
+                    <label for="fecha1">Primera fecha:</label>
+                    <input type="date" id="fecha1">
+                </div>
+                <div class="input-group">
+                    <label for="fecha2">Segunda fecha:</label>
+                    <input type="date" id="fecha2">
+                </div>
+                <button id="btnCalcularFechas">Calcular Diferencia</button>
+                <div id="resultadoFechas" class="resultado"></div>
+            </div>
+        </section>
+    </div>
+	
+	<footer>
+		<p>
+			Desarrollado por: jlcevall <br>
+			<a href="mailto:jujoceva@espol.edu.ec"> Correo Electrónico </a> ||
+			<a href="tel:+593992300774"> Número de Teléfono </a>
+		</p>
+		<p> © 2025 Página de prácticas académicas | ESPOL </p>
+	</footer>
+
+    <script src="javascript.js"></script>
+</body>
 </html>
